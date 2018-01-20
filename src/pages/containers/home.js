@@ -24,7 +24,7 @@ class Home extends Component {
   }
   componentDidCatch(error, info) {
     this.setState({
-      handleError= true,
+      handleError: true,
     })
   }
   render() {
