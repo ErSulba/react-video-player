@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './video.css';
 
 class Video extends Component {
+  //Handling the play and pause of the video
   togglePlay() {
     if (this.props.pause) {
       this.video.play()
@@ -21,12 +22,16 @@ class Video extends Component {
     this.video = element;
   }
   render() {
+    const {
+      handleLoadedMetadata
+    } = this.props
     return (
       <div className="Video">
         <video
           src={this.props.src}
           autoPlay={this.props.autoPlay}
           ref= {this.setRef}
+          onLoadedMetadata = {handleLoadedMetadata}
         />
       </div>
 
