@@ -21,9 +21,11 @@ class Video extends Component {
   setRef = element => {
     this.video = element;
   }
+
+  //The render Method recieving all the props and events
   render() {
     const {
-      handleLoadedMetadata
+      handleLoadedMetadata, handleTimeMediaUpdate
     } = this.props
     return (
       <div className="Video">
@@ -32,6 +34,7 @@ class Video extends Component {
           autoPlay={this.props.autoPlay}
           ref= {this.setRef}
           onLoadedMetadata = {handleLoadedMetadata}
+          onTimeUpdate = { handleTimeMediaUpdate }
         />
       </div>
 
