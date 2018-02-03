@@ -25,7 +25,10 @@ class Video extends Component {
   //The render Method recieving all the props and events
   render() {
     const {
-      handleLoadedMetadata, handleTimeMediaUpdate, handleSeeked, handleSeeking
+      handleLoadedMetadata,
+      handleTimeMediaUpdate,
+      handleSeeking,
+      handleSeeked,
     } = this.props
     return (
       <div className="Video">
